@@ -329,7 +329,8 @@ def main():
     exptag = "run1" # Experiment tag to identify the run
     in_dir = '/path/to/dataset/' # Path to the caravan dataset. Make sure the basic preprocessing discussed in Rasiya Koya et al. (2024) is done.
     region = 'camels_gb' # Region of the dataset. This is used to identify the output files.
-    files = glob.glob(in_dir+region+'/*.csv')
+    files = glob.glob(in_dir+region+'/*.csv') # This is the list of csv files with time series of each basin in each file. 
+                                              # The overall path structure might be different depending on how you stored the data. Make sure it matches yours. 
     out_dir = '/path/to/output/' # Path to the output directory. Make sure the directory exists. Or create one.
 
     perf_scores_list = []
