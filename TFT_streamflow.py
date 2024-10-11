@@ -328,6 +328,7 @@ def train_TFT(f, out_dir, station_id, region, exptag):
 def main():
     exptag = "run1" # Experiment tag to identify the run
     in_dir = '/path/to/dataset/' # Path to the caravan dataset. Make sure the basic preprocessing discussed in Rasiya Koya et al. (2024) is done.
+                                 # NOTE that static and dynamic variables are combined to one file (constant columns for static attributes). 
     region = 'camels_gb' # Region of the dataset. This is used to identify the output files.
     files = glob.glob(in_dir+region+'/*.csv') # This is the list of csv files with time series of each basin in each file. 
                                               # The overall path structure might be different depending on how you stored the data. Make sure it matches yours. 
